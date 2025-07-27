@@ -8,6 +8,62 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <style>
+    #chatbot-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #4CAF50;
+      color: white;
+      font-size: 30px;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 9999;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #chatbot-box {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 280px;
+      max-height: 400px;
+      background: #fff;
+      border: 2px solid #4CAF50;
+      border-radius: 15px;
+      z-index: 9999;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    #chat-header {
+      background: #4CAF50;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    #chat-messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      font-size: 14px;
+      height: 250px;
+    }
+
+    #chat-input {
+      border: none;
+      border-top: 1px solid #ccc;
+      padding: 10px;
+      width: 100%;
+      font-size: 14px;
+      outline: none;
+    }
+  </style>
 </head>
 
 <body class="bg-green-50 text-gray-800 font-sans">
@@ -31,7 +87,9 @@
     <h2 class="text-5xl font-extrabold text-green-800 mb-6" data-aos="fade-up">JhadJhadoli</h2>
     <p class="text-2xl text-gray-600 mb-4" data-aos="fade-up" data-aos-delay="100">Where Healing Takes Root</p>
     <p class="text-lg text-gray-500 mb-8" data-aos="fade-up" data-aos-delay="200">Your home garden, your heart’s remedy.</p>
-    <a href="plants.html" class="inline-block px-6 py-3 bg-lime-500 text-white rounded-full hover:bg-lime-600 transition duration-300" data-aos="fade-up" data-aos-delay="300">Explore Plants</a>
+    <a href="plants.html"
+      class="inline-block px-6 py-3 bg-lime-500 text-white rounded-full hover:bg-lime-600 transition duration-300"
+      data-aos="fade-up" data-aos-delay="300">Explore Plants</a>
   </section>
 
   <!-- Footer -->
@@ -39,9 +97,56 @@
     <p>&copy; 2025 JhadJhadoli. All rights reserved.</p>
   </footer>
 
+  <!-- AOS Animation Init -->
   <script>
     AOS.init();
   </script>
+
+  <!-- TukTukTulsi Chatbot -->
+  <div id="chatbot-icon" onclick="toggleChat()">🌿</div>
+
+  <div id="chatbot-box">
+    <div id="chat-header">TukTukTulsi 💬</div>
+    <div id="chat-messages"></div>
+    <input type="text" id="chat-input" placeholder="Ask me something..." onkeydown="handleUserInput(event)">
+  </div>
+
+  <script>
+    function toggleChat() {
+      const chatbotBox = document.getElementById("chatbot-box");
+      chatbotBox.style.display = chatbotBox.style.display === "none" ? "flex" : "none";
+    }
+
+    function handleUserInput(event) {
+      if (event.key === "Enter") {
+        const input = document.getElementById("chat-input");
+        const messages = document.getElementById("chat-messages");
+        const userText = input.value.trim();
+
+        if (userText !== "") {
+          // Show user message
+          messages.innerHTML += `<div><strong>You:</strong> ${userText}</div>`;
+
+          // Very basic AI bot logic
+          let botResponse = "I'm still learning 🌱, but try asking about plants!";
+          if (userText.toLowerCase().includes("tulsi")) {
+            botResponse = "Tulsi is a sacred plant known for its healing powers 🌿. Water it daily and give it morning sun!";
+          } else if (userText.toLowerCase().includes("care")) {
+            botResponse = "Most plants need sunlight, water, and love. Check our Care Tips page!";
+          }
+
+          // Show bot response
+          setTimeout(() => {
+            messages.innerHTML += `<div><strong>TukTukTulsi:</strong> ${botResponse}</div>`;
+            messages.scrollTop = messages.scrollHeight;
+          }, 500);
+
+          input.value = "";
+        }
+      }
+    }
+  </script>
+
 </body>
 
 </html>
