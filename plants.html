@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Plants - JhadJhadoli</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body class="bg-green-50 text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-green-700">JhadJhadoli</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="text-gray-600 hover:text-green-700">Home</a>
+        <a href="plants.html" class="text-green-700 font-semibold">Plants</a>
+        <a href="recipes.html" class="text-gray-600 hover:text-green-700">Recipes</a>
+        <a href="care.html" class="text-gray-600 hover:text-green-700">Care Tips</a>
+        <a href="blog.html" class="text-gray-600 hover:text-green-700">Blog</a>
+        <a href="contact.html" class="text-gray-600 hover:text-green-700">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Title -->
+  <section class="max-w-7xl mx-auto px-4 py-12 text-center">
+    <h2 class="text-4xl font-bold text-green-800 mb-4" data-aos="fade-up">Explore Our Healing Plants</h2>
+    <p class="text-lg text-gray-600" data-aos="fade-up" data-aos-delay="100">
+      Handpicked for your health, home, and harmony.
+    </p>
+  </section>
+
+  <!-- Plants Grid -->
+  <section class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 pb-16">
+    <!-- Example Plant Card -->
+    <div class="bg-white rounded-2xl shadow-md p-6" data-aos="fade-up">
+      <img src="https://source.unsplash.com/300x200/?tulsi,plant" alt="Tulsi" class="rounded-xl w-full mb-4">
+      <h3 class="text-2xl font-semibold text-green-700">Tulsi</h3>
+      <p class="text-gray-600 mt-2">Boosts immunity, purifies air, and holds deep spiritual value.</p>
+      <a href="tulsi.html" class="...">Explore Tulsi</a>
+
+      <a href="#" class="inline-block mt-4 text-lime-600 hover:underline">Buy on Amazon</a>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-md p-6" data-aos="fade-up" data-aos-delay="100">
+      <img src="https://source.unsplash.com/300x200/?aloe-vera" alt="Aloe Vera" class="rounded-xl w-full mb-4">
+      <h3 class="text-2xl font-semibold text-green-700">Aloe Vera</h3>
+      <p class="text-gray-600 mt-2">Soothes skin, aids digestion, and beautifies your garden.</p>
+      <a href="aloe-vera.html" class="text-green-700 font-bold hover:underline">Know More</a>
+      <a href="#" class="inline-block mt-4 text-lime-600 hover:underline">Buy on Flipkart</a>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-md p-6" data-aos="fade-up" data-aos-delay="200">
+      <img src="https://source.unsplash.com/300x200/?neem,tree" alt="Neem" class="rounded-xl w-full mb-4">
+      <h3 class="text-2xl font-semibold text-green-700">Neem</h3>
+      <p class="text-gray-600 mt-2">Natural antibacterial, skin healer, and pest repellent.</p>
+      <a href="neem.html" class="...">Explore Neem</a>
+
+      <a href="#" class="inline-block mt-4 text-lime-600 hover:underline">Buy on Amazon</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-800 text-white py-6 text-center">
+    <p>&copy; 2025 JhadJhadoli. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
