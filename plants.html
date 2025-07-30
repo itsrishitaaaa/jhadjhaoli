@@ -25,17 +25,10 @@
     </nav>
   </header>
 
-  <!-- Search Bar -->
-  <div class="max-w-4xl mx-auto my-8 px-4">
-    <input type="text" id="plantSearch" placeholder="Search for a plant..."
-      class="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:border-green-400"
-      onkeyup="filterPlants()">
-  </div>
-
   <main class="p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     <!-- Orchid Card -->
-    <div class="plant-card bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 space-y-4" data-aos="fade-up">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Orchidaceae_-_Orchid.jpg/800px-Orchidaceae_-_Orchid.jpg" alt="Orchid Plant" class="rounded-xl w-full h-48 object-cover">
+    <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 space-y-4" data-aos="fade-up">
+      <img src="orchidss.jpeg" alt="Orchid Plant" class="rounded-xl w-full h-48 object-cover">
       <h2 class="text-2xl font-bold text-green-900">Orchid</h2>
       <p class="text-gray-700 text-sm">
         A medicinal marvel cloaked in elegance. Orchids, especially Phalaenopsis, are safe, edible, and bursting with wellness potential.
@@ -62,8 +55,8 @@
     </div>
 
     <!-- Tulsi Card Updated -->
-    <div class="plant-card bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 space-y-4" data-aos="fade-up">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Ocimum_tenuiflorum2.jpg" alt="Tulsi" class="rounded-xl w-full h-48 object-cover">
+    <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 space-y-4" data-aos="fade-up">
+      <img src="tulsi.jpeg" alt="Tulsi" class="rounded-xl w-full h-48 object-cover">
       <h2 class="text-2xl font-bold text-green-900">Tulsi</h2>
       <p class="text-gray-700 text-sm">
         A sacred herb in Ayurveda, Tulsi purifies the air and the body, and holds spiritual significance in Indian households.
@@ -87,8 +80,8 @@
     </div>
 
     <!-- Aloe Vera Card Updated -->
-    <div class="plant-card bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 space-y-4" data-aos="fade-up">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Aloe_vera_flower_inset.jpg" alt="Aloe Vera" class="rounded-xl w-full h-48 object-cover">
+    <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 space-y-4" data-aos="fade-up">
+      <img src="aloevera.jpeg" alt="Aloe Vera" class="rounded-xl w-full h-48 object-cover">
       <h2 class="text-2xl font-bold text-green-900">Aloe Vera</h2>
       <p class="text-gray-700 text-sm">
         Aloe Vera is a cooling, soothing plant with benefits for skin, digestion, and immunity.
@@ -114,19 +107,7 @@
 
   <script>
     AOS.init();
-
-    function filterPlants() {
-      const input = document.getElementById("plantSearch");
-      const filter = input.value.toLowerCase();
-      const cards = document.querySelectorAll(".plant-card");
-
-      cards.forEach(card => {
-        const text = card.textContent.toLowerCase();
-        card.style.display = text.includes(filter) ? "block" : "none";
-      });
-    }
   </script>
 </body>
 
 </html>
-
