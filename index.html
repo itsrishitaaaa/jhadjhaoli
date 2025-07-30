@@ -92,19 +92,49 @@
       data-aos="fade-up" data-aos-delay="300">Explore Plants</a>
   </section>
 
+  <!-- Plant of the Month -->
   <section class="bg-white shadow-lg rounded-xl p-8 my-8 max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8" data-aos="zoom-in">
-  <img src="orchid-plant5NF.webp" alt="Orchid Plant" class="w-full md:w-1/3 rounded-xl shadow-md">
-  <div class="flex-1">
-    <h2 class="text-3xl font-bold text-green-800 mb-2">🌸 Plant of the Month: Orchid</h2>
-    <p class="text-gray-700 mb-4">
-      Known for its calming fragrance and healing properties, the Orchid is July’s plant to cherish.
-      Great for skin health, digestion, and even reducing stress. A true botanical beauty 🌿
-    </p>
-    <a href="orchid.html" class="text-white bg-green-600 px-5 py-2 rounded-xl shadow hover:bg-green-700 transition">Learn More</a>
-    <a href="https://www.flipkart.com" target="_blank" class="ml-4 text-green-600 underline hover:text-green-800">Buy on Flipkart</a>
-  </div>
-</section>
+    <img src="orchid-plant5NF.webp" alt="Orchid Plant" class="w-full md:w-1/3 rounded-xl shadow-md">
+    <div class="flex-1">
+      <h2 class="text-3xl font-bold text-green-800 mb-2">🌸 Plant of the Month: Orchid</h2>
+      <p class="text-gray-700 mb-4">
+        Known for its calming fragrance and healing properties, the Orchid is July’s plant to cherish.
+        Great for skin health, digestion, and even reducing stress. A true botanical beauty 🌿
+      </p>
+      <a href="orchid.html" class="text-white bg-green-600 px-5 py-2 rounded-xl shadow hover:bg-green-700 transition">Learn More</a>
+      <a href="https://www.flipkart.com" target="_blank" class="ml-4 text-green-600 underline hover:text-green-800">Buy on Flipkart</a>
+    </div>
+  </section>
 
+  <!-- Blog Section -->
+  <section class="max-w-6xl mx-auto px-4 py-16" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-green-800 mb-8 text-center">🌱 Herbal Reads</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Blog Post 1 -->
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1524594154907-923d52e37f6b" alt="Blog Post 1" class="rounded-lg mb-4 h-40 w-full object-cover">
+        <h3 class="text-xl font-semibold text-green-700 mb-2">5 Plants for a Stress-Free Life</h3>
+        <p class="text-gray-600 text-sm mb-4">Discover natural herbs that calm your mind and soothe your soul—no pills, just plants 🌿</p>
+        <a href="blog.html#stressfree" class="text-green-700 underline text-sm">Read More</a>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1628157588553-6f21966a5bd2" alt="Blog Post 2" class="rounded-lg mb-4 h-40 w-full object-cover">
+        <h3 class="text-xl font-semibold text-green-700 mb-2">Orchid vs Tulsi – Who Heals Better?</h3>
+        <p class="text-gray-600 text-sm mb-4">A face-off between elegance and tradition. Which plant is your ultimate healer? 🌸 vs 🌿</p>
+        <a href="blog.html#orchidvstulsi" class="text-green-700 underline text-sm">Read More</a>
+      </div>
+
+      <!-- Blog Post 3 -->
+      <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1605478371225-e1c98c93a3e1" alt="Blog Post 3" class="rounded-lg mb-4 h-40 w-full object-cover">
+        <h3 class="text-xl font-semibold text-green-700 mb-2">Kitchen Herbs That Detox Like Magic</h3>
+        <p class="text-gray-600 text-sm mb-4">You don’t need a cleanse — you need these 3 herbs chilling in your kitchen already 🍃</p>
+        <a href="blog.html#detoxherbs" class="text-green-700 underline text-sm">Read More</a>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="bg-green-800 text-white py-6 text-center">
@@ -118,7 +148,6 @@
 
   <!-- TukTukTulsi Chatbot -->
   <div id="chatbot-icon" onclick="toggleChat()">🌿</div>
-
   <div id="chatbot-box">
     <div id="chat-header">TukTukTulsi 💬</div>
     <div id="chat-messages"></div>
@@ -126,6 +155,29 @@
   </div>
 
   <script>
+    const plantFacts = {
+      tulsi: {
+        care: "🌞 Place Tulsi near a sunny window. Water daily. Loves fresh air.",
+        recipe: "🍵 Brew Tulsi tea using 5 fresh leaves and hot water. Immunity unlocked!",
+        buy: "🛒 You can buy Tulsi on Amazon here: https://www.amazon.in/s?k=tulsi+plant"
+      },
+      orchid: {
+        care: "💧 Orchids love bright indirect light. Mist the leaves weekly, avoid overwatering.",
+        recipe: "🍽️ Try using orchid petals in salads or stir-fry. Zambian 'Chikanda' uses its roots!",
+        buy: "🛍️ Grab your Orchid here: https://www.flipkart.com"
+      },
+      aloe: {
+        care: "💧 Aloe loves light. Water once the soil is dry. Keep it warm and bright!",
+        recipe: "🍹 Scoop the pulp into smoothies or mix with honey for gut health.",
+        buy: "🛒 Aloe Vera available on Flipkart: https://www.flipkart.com/search?q=aloe+vera+plant"
+      },
+      neem: {
+        care: "🌿 Neem grows well in sunlight. Water every 2–3 days. Needs space to grow tall.",
+        recipe: "😷 Make a face pack with neem paste + rosewater. Helps with acne and oily skin!",
+        buy: "🛒 Buy Neem plants: https://www.amazon.in/s?k=neem+plant"
+      }
+    };
+
     function toggleChat() {
       const chatbotBox = document.getElementById("chatbot-box");
       chatbotBox.style.display = chatbotBox.style.display === "none" ? "flex" : "none";
@@ -135,32 +187,46 @@
       if (event.key === "Enter") {
         const input = document.getElementById("chat-input");
         const messages = document.getElementById("chat-messages");
-        const userText = input.value.trim();
+        const userText = input.value.trim().toLowerCase();
 
         if (userText !== "") {
-          // Show user message
           messages.innerHTML += `<div><strong>You:</strong> ${userText}</div>`;
 
-          // Very basic AI bot logic
-          let botResponse = "I'm still learning 🌱, but try asking about plants!";
-          if (userText.toLowerCase().includes("tulsi")) {
-            botResponse = "Tulsi is a sacred plant known for its healing powers 🌿. Water it daily and give it morning sun!";
-          } else if (userText.toLowerCase().includes("care")) {
-            botResponse = "Most plants need sunlight, water, and love. Check our Care Tips page!";
+          let botResponse = "I'm still learning 🌱. Try asking about plant care, recipes, or where to buy!";
+
+          for (const plant in plantFacts) {
+            if (userText.includes(plant)) {
+              if (userText.includes("care") || userText.includes("grow")) {
+                botResponse = plantFacts[plant].care;
+              } else if (userText.includes("recipe") || userText.includes("eat") || userText.includes("how to use")) {
+                botResponse = plantFacts[plant].recipe;
+              } else if (userText.includes("buy") || userText.includes("get")) {
+                botResponse = plantFacts[plant].buy;
+              } else {
+                botResponse = `🌿 Ask me about ${plant} care, recipes, or how to buy!`;
+              }
+              break;
+            }
           }
 
-          // Show bot response
+          if (userText.includes("best plant") && userText.includes("stress")) {
+            botResponse = "🌸 Orchid is a vibe! Its fragrance reduces stress and improves mood.";
+          } else if (userText.includes("which plant for skin") || userText.includes("good for skin")) {
+            botResponse = "🧴 Neem & Aloe Vera are skincare legends. Try neem face pack or aloe pulp directly!";
+          } else if (userText.includes("tea")) {
+            botResponse = "🍵 Try Tulsi Tea or Aloe juice. Check our Recipes section for more!";
+          }
+
           setTimeout(() => {
             messages.innerHTML += `<div><strong>TukTukTulsi:</strong> ${botResponse}</div>`;
             messages.scrollTop = messages.scrollHeight;
-          }, 500);
+          }, 400);
 
           input.value = "";
         }
       }
     }
   </script>
-
 </body>
 
 </html>
