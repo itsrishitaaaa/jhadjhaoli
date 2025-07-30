@@ -6,96 +6,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Explore Plants - JhadJhadoli</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
-<body class="bg-green-50 text-gray-800 font-sans">
-
-  <!-- Navbar -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-green-700">JhadJhadoli</h1>
-      <nav class="space-x-4">
-        <a href="index.html" class="text-gray-600 hover:text-green-700">Home</a>
-        <a href="plants.html" class="text-green-700 font-semibold">Plants</a>
-        <a href="recipes.html" class="text-gray-600 hover:text-green-700">Recipes</a>
-        <a href="care.html" class="text-gray-600 hover:text-green-700">Care Tips</a>
-        <a href="blog.html" class="text-gray-600 hover:text-green-700">Blog</a>
-        <a href="contact.html" class="text-gray-600 hover:text-green-700">Contact</a>
-      </nav>
-    </div>
+<body class="bg-green-50">
+  <header class="bg-white shadow-md p-4 flex justify-between items-center">
+    <h1 class="text-green-800 text-2xl font-bold">JhadJhadoli</h1>
+    <nav>
+      <ul class="flex gap-6 text-green-800 font-medium">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="plants.html" class="text-green-900 font-bold">Plants</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="care.html">Care Tips</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Page Title -->
-  <section class="max-w-7xl mx-auto px-4 py-12 text-center">
-    <h2 class="text-4xl font-bold text-green-800 mb-4" data-aos="fade-up">Explore Our Healing Plants</h2>
-    <p class="text-lg text-gray-600" data-aos="fade-up" data-aos-delay="100">
-      Handpicked for your health, home, and harmony.
-    </p>
-  </section>
-
-  <!-- Plants Grid -->
-  <section class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 pb-16">
-    <!-- Example Plant Card -->
+  <main class="p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Orchid Card -->
     <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 space-y-4" data-aos="fade-up">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Orchidaceae_-_Orchid.jpg/800px-Orchidaceae_-_Orchid.jpg" alt="Orchid Plant" class="rounded-xl w-full h-48 object-cover">
-  <h2 class="text-2xl font-bold text-green-900">Orchid</h2>
-  <p class="text-gray-700 text-sm">
-    A medicinal marvel cloaked in elegance. Orchids, especially Phalaenopsis, are safe, edible, and bursting with wellness potential.
-  </p>
-  
-  <div>
-    <h3 class="font-semibold text-green-700">🌿 Key Benefits:</h3>
-    <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
-      <li>💆‍♀️ Skin: Rich in Vitamin A & antioxidants — reduces wrinkles, rejuvenates skin.</li>
-      <li>🫃 Digestion: Relieves ulcers, acidity, constipation.</li>
-      <li>👁️ Eyes: Packed with Vitamin C & E for better vision.</li>
-      <li>🧠 Stress: Used traditionally for calming the mind.</li>
-      <li>🛡️ Antimicrobial, Anti-inflammatory, Anti-cancer effects.</li>
-      <li>🌿 Treats ailments from arthritis to snake bites (yes, for real).</li>
-    </ul>
-  </div>
-
-  <div>
-    <h3 class="font-semibold text-green-700">🍽️ Edible Uses:</h3>
-    <p class="text-gray-600 text-sm">
-      Orchid petals can be eaten raw in salads, stir-fried, or candied for desserts. In Zambia, the root is used to prepare <strong>Chikanda</strong>, a protein-rich dish often called "African polony".
-    </p>
-  </div>
-</div>
-
-    <div class="bg-white rounded-2xl shadow-md p-6" data-aos="fade-up">
-      <img src="https://source.unsplash.com/300x200/?tulsi,plant" alt="Tulsi" class="rounded-xl w-full mb-4">
-      <h3 class="text-2xl font-semibold text-green-700">Tulsi</h3>
-      <p class="text-gray-600 mt-2">Boosts immunity, purifies air, and holds deep spiritual value.</p>
-      <a href="tulsi.html" class="...">Explore Tulsi</a>
-
-      <a href="#" class="inline-block mt-4 text-lime-600 hover:underline">Buy on Amazon</a>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Orchidaceae_-_Orchid.jpg/800px-Orchidaceae_-_Orchid.jpg" alt="Orchid Plant" class="rounded-xl w-full h-48 object-cover">
+      <h2 class="text-2xl font-bold text-green-900">Orchid</h2>
+      <p class="text-gray-700 text-sm">
+        A medicinal marvel cloaked in elegance. Orchids, especially Phalaenopsis, are safe, edible, and bursting with wellness potential.
+      </p>
+      <div>
+        <h3 class="font-semibold text-green-700">🌿 Key Benefits:</h3>
+        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+          <li>💆‍♀️ Skin: Rich in Vitamin A & antioxidants — reduces wrinkles, rejuvenates skin.</li>
+          <li>🫃 Digestion: Relieves ulcers, acidity, constipation.</li>
+          <li>👁️ Eyes: Packed with Vitamin C & E for better vision.</li>
+          <li>🧠 Stress: Used traditionally for calming the mind.</li>
+          <li>🛡️ Antimicrobial, Anti-inflammatory, Anti-cancer effects.</li>
+          <li>🌿 Treats ailments from arthritis to snake bites (yes, for real).</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-green-700">🍽️ Edible Uses:</h3>
+        <p class="text-gray-600 text-sm">
+          Orchid petals can be eaten raw in salads, stir-fried, or candied for desserts. In Zambia, the root is used to prepare <strong>Chikanda</strong>, a protein-rich dish often called "African polony".
+        </p>
+      </div>
+      <a href="https://www.amazon.in/s?k=orchid+plant" target="_blank" class="inline-block text-sm text-white bg-green-600 px-4 py-2 rounded-lg mt-2 hover:bg-green-700">Buy Orchid on Amazon</a>
+      <a href="orchid.html" class="text-sm text-green-700 underline block mt-1">Learn more about Orchid</a>
     </div>
 
-    <div class="bg-white rounded-2xl shadow-md p-6" data-aos="fade-up" data-aos-delay="100">
-      <img src="https://source.unsplash.com/300x200/?aloe-vera" alt="Aloe Vera" class="rounded-xl w-full mb-4">
-      <h3 class="text-2xl font-semibold text-green-700">Aloe Vera</h3>
-      <p class="text-gray-600 mt-2">Soothes skin, aids digestion, and beautifies your garden.</p>
-      <a href="aloe-vera.html" class="text-green-700 font-bold hover:underline">Know More</a>
-      <a href="#" class="inline-block mt-4 text-lime-600 hover:underline">Buy on Flipkart</a>
+    <!-- Tulsi Card Updated -->
+    <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 space-y-4" data-aos="fade-up">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Ocimum_tenuiflorum2.jpg" alt="Tulsi" class="rounded-xl w-full h-48 object-cover">
+      <h2 class="text-2xl font-bold text-green-900">Tulsi</h2>
+      <p class="text-gray-700 text-sm">
+        A sacred herb in Ayurveda, Tulsi purifies the air and the body, and holds spiritual significance in Indian households.
+      </p>
+      <div>
+        <h3 class="font-semibold text-green-700">🌿 Key Benefits:</h3>
+        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+          <li>Boosts immunity and fights infections.</li>
+          <li>Reduces stress and balances hormones.</li>
+          <li>Improves respiratory health.</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-green-700">🍽️ Traditional Uses:</h3>
+        <p class="text-gray-600 text-sm">
+          Commonly used in kadhas, teas, and home remedies for colds, coughs, and flu. Often consumed as Tulsi tea.
+        </p>
+      </div>
+      <a href="https://www.amazon.in/s?k=tulsi+plant" target="_blank" class="inline-block text-sm text-white bg-green-600 px-4 py-2 rounded-lg mt-2 hover:bg-green-700">Buy Tulsi on Amazon</a>
+      <a href="tulsi.html" class="text-sm text-green-700 underline block mt-1">Learn more about Tulsi</a>
     </div>
 
-    <div class="bg-white rounded-2xl shadow-md p-6" data-aos="fade-up" data-aos-delay="200">
-      <img src="https://source.unsplash.com/300x200/?neem,tree" alt="Neem" class="rounded-xl w-full mb-4">
-      <h3 class="text-2xl font-semibold text-green-700">Neem</h3>
-      <p class="text-gray-600 mt-2">Natural antibacterial, skin healer, and pest repellent.</p>
-      <a href="neem.html" class="...">Explore Neem</a>
-
-      <a href="#" class="inline-block mt-4 text-lime-600 hover:underline">Buy on Amazon</a>
+    <!-- Aloe Vera Card Updated -->
+    <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 space-y-4" data-aos="fade-up">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Aloe_vera_flower_inset.jpg" alt="Aloe Vera" class="rounded-xl w-full h-48 object-cover">
+      <h2 class="text-2xl font-bold text-green-900">Aloe Vera</h2>
+      <p class="text-gray-700 text-sm">
+        Aloe Vera is a cooling, soothing plant with benefits for skin, digestion, and immunity.
+      </p>
+      <div>
+        <h3 class="font-semibold text-green-700">🌿 Key Benefits:</h3>
+        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+          <li>Heals burns and hydrates skin.</li>
+          <li>Improves gut health and reduces inflammation.</li>
+          <li>Supports liver detoxification and boosts immunity.</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold text-green-700">🍽️ Edible Uses:</h3>
+        <p class="text-gray-600 text-sm">
+          Aloe pulp is used in juices, smoothies, and herbal tonics. Often combined with honey or lemon.
+        </p>
+      </div>
+      <a href="https://www.flipkart.com/search?q=aloe+vera+plant" target="_blank" class="inline-block text-sm text-white bg-green-600 px-4 py-2 rounded-lg mt-2 hover:bg-green-700">Buy Aloe Vera on Flipkart</a>
+      <a href="aloe.html" class="text-sm text-green-700 underline block mt-1">Learn more about Aloe Vera</a>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-green-800 text-white py-6 text-center">
-    <p>&copy; 2025 JhadJhadoli. All rights reserved.</p>
-  </footer>
+  </main>
 
   <script>
     AOS.init();
