@@ -25,88 +25,116 @@
     </nav>
   </header>
 
-  <main class="p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <!-- Orchid Card -->
-    <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 space-y-4" data-aos="fade-up">
-      <img src="orchidss.jpeg" alt="Orchid Plant" class="rounded-xl w-full h-48 object-cover">
-      <h2 class="text-2xl font-bold text-green-900">Orchid</h2>
-      <p class="text-gray-700 text-sm">
-        A medicinal marvel cloaked in elegance. Orchids, especially Phalaenopsis, are safe, edible, and bursting with wellness potential.
-      </p>
-      <div>
-        <h3 class="font-semibold text-green-700">🌿 Key Benefits:</h3>
-        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
-          <li>💆‍♀️ Skin: Rich in Vitamin A & antioxidants — reduces wrinkles, rejuvenates skin.</li>
-          <li>🫃 Digestion: Relieves ulcers, acidity, constipation.</li>
-          <li>👁️ Eyes: Packed with Vitamin C & E for better vision.</li>
-          <li>🧠 Stress: Used traditionally for calming the mind.</li>
-          <li>🛡️ Antimicrobial, Anti-inflammatory, Anti-cancer effects.</li>
-          <li>🌿 Treats ailments from arthritis to snake bites (yes, for real).</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-green-700">🍽️ Edible Uses:</h3>
-        <p class="text-gray-600 text-sm">
-          Orchid petals can be eaten raw in salads, stir-fried, or candied for desserts. In Zambia, the root is used to prepare <strong>Chikanda</strong>, a protein-rich dish often called "African polony".
-        </p>
-      </div>
-      <a href="https://www.amazon.in/s?k=orchid+plant" target="_blank" class="inline-block text-sm text-white bg-green-600 px-4 py-2 rounded-lg mt-2 hover:bg-green-700">Buy Orchid on Amazon</a>
-      <a href="orchid.html" class="text-sm text-green-700 underline block mt-1">Learn more about Orchid</a>
+  <main class="p-8">
+    <!-- Search Bar -->
+    <div class="flex justify-center mb-6">
+      <input type="text" placeholder="Search plants..." class="w-full md:w-1/2 p-3 rounded-lg border border-green-300 focus:outline-none focus:ring-2 focus:ring-green-500" id="searchInput">
     </div>
 
-    <!-- Tulsi Card Updated -->
-    <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 space-y-4" data-aos="fade-up">
-      <img src="tulsi.jpeg" alt="Tulsi" class="rounded-xl w-full h-48 object-cover">
-      <h2 class="text-2xl font-bold text-green-900">Tulsi</h2>
-      <p class="text-gray-700 text-sm">
-        A sacred herb in Ayurveda, Tulsi purifies the air and the body, and holds spiritual significance in Indian households.
-      </p>
-      <div>
-        <h3 class="font-semibold text-green-700">🌿 Key Benefits:</h3>
-        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
-          <li>Boosts immunity and fights infections.</li>
-          <li>Reduces stress and balances hormones.</li>
-          <li>Improves respiratory health.</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-semibold text-green-700">🍽️ Traditional Uses:</h3>
-        <p class="text-gray-600 text-sm">
-          Commonly used in kadhas, teas, and home remedies for colds, coughs, and flu. Often consumed as Tulsi tea.
-        </p>
-      </div>
-      <a href="https://www.amazon.in/s?k=tulsi+plant" target="_blank" class="inline-block text-sm text-white bg-green-600 px-4 py-2 rounded-lg mt-2 hover:bg-green-700">Buy Tulsi on Amazon</a>
-      <a href="tulsi.html" class="text-sm text-green-700 underline block mt-1">Learn more about Tulsi</a>
-    </div>
+    <!-- Plant Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="plantCards">
 
-    <!-- Aloe Vera Card Updated -->
-    <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300 space-y-4" data-aos="fade-up">
-      <img src="aloevera.jpeg" alt="Aloe Vera" class="rounded-xl w-full h-48 object-cover">
-      <h2 class="text-2xl font-bold text-green-900">Aloe Vera</h2>
-      <p class="text-gray-700 text-sm">
-        Aloe Vera is a cooling, soothing plant with benefits for skin, digestion, and immunity.
-      </p>
-      <div>
-        <h3 class="font-semibold text-green-700">🌿 Key Benefits:</h3>
-        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
-          <li>Heals burns and hydrates skin.</li>
-          <li>Improves gut health and reduces inflammation.</li>
-          <li>Supports liver detoxification and boosts immunity.</li>
-        </ul>
+      <!-- Orchid Card -->
+      <div class="bg-white rounded-2xl shadow-md p-6 transition duration-300 space-y-4" data-aos="fade-up">
+        <img src="orchidss.jpeg" alt="Orchid" class="rounded-xl w-full h-48 object-cover">
+        <h2 class="text-2xl font-bold text-green-900">Orchid</h2>
+        <p class="text-gray-700 text-sm">A graceful bloom with hidden healing powers.</p>
+        <button onclick="toggleDetails('orchid-details', this)" class="text-white bg-green-600 px-4 py-2 rounded-lg hover:bg-green-700 text-sm">Learn more</button>
+        <div id="orchid-details" class="hidden mt-4 text-sm text-gray-700 space-y-3">
+          <div>
+            <h3 class="font-semibold text-green-700">🌿 Key Benefits:</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>💆‍♀️ Skin: Reduces wrinkles, rejuvenates skin</li>
+              <li>🫃 Digestion: Helps with ulcers and acidity</li>
+              <li>👁️ Eyes: Improves vision with vitamins</li>
+              <li>🧠 Stress: Traditional calming herb</li>
+              <li>🛡️ Antimicrobial, Anti-cancer properties</li>
+              <li>🌿 Even used for snake bites!</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-green-700">🍽️ Edible Uses:</h3>
+            <p>Petals in salads, desserts. In Africa, root used in Chikanda ("African polony").</p>
+          </div>
+          <a href="https://www.amazon.in/s?k=orchid+plant" target="_blank" class="text-white bg-green-600 px-4 py-1 rounded hover:bg-green-700 inline-block">Buy Orchid on Amazon</a>
+        </div>
       </div>
-      <div>
-        <h3 class="font-semibold text-green-700">🍽️ Edible Uses:</h3>
-        <p class="text-gray-600 text-sm">
-          Aloe pulp is used in juices, smoothies, and herbal tonics. Often combined with honey or lemon.
-        </p>
+
+      <!-- Tulsi Card -->
+      <div class="bg-white rounded-2xl shadow-md p-6 transition duration-300 space-y-4" data-aos="fade-up">
+        <img src="tulsi.jpeg" alt="Tulsi" class="rounded-xl w-full h-48 object-cover">
+        <h2 class="text-2xl font-bold text-green-900">Tulsi</h2>
+        <p class="text-gray-700 text-sm">A sacred herb for immunity, clarity, and calm.</p>
+        <button onclick="toggleDetails('tulsi-details', this)" class="text-white bg-green-600 px-4 py-2 rounded-lg hover:bg-green-700 text-sm">Learn more</button>
+        <div id="tulsi-details" class="hidden mt-4 text-sm text-gray-700 space-y-3">
+          <div>
+            <h3 class="font-semibold text-green-700">🌿 Key Benefits:</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Boosts immunity</li>
+              <li>Reduces stress and anxiety</li>
+              <li>Improves respiratory health</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-green-700">🍽️ Traditional Uses:</h3>
+            <p>Used in teas, kadhas, and home remedies for cough and cold.</p>
+          </div>
+          <a href="https://www.amazon.in/s?k=tulsi+plant" target="_blank" class="text-white bg-green-600 px-4 py-1 rounded hover:bg-green-700 inline-block">Buy Tulsi on Amazon</a>
+        </div>
       </div>
-      <a href="https://www.flipkart.com/search?q=aloe+vera+plant" target="_blank" class="inline-block text-sm text-white bg-green-600 px-4 py-2 rounded-lg mt-2 hover:bg-green-700">Buy Aloe Vera on Flipkart</a>
-      <a href="aloe.html" class="text-sm text-green-700 underline block mt-1">Learn more about Aloe Vera</a>
+
+      <!-- Aloe Vera Card -->
+      <div class="bg-white rounded-2xl shadow-md p-6 transition duration-300 space-y-4" data-aos="fade-up">
+        <img src="aloevera.jpeg" alt="Aloe Vera" class="rounded-xl w-full h-48 object-cover">
+        <h2 class="text-2xl font-bold text-green-900">Aloe Vera</h2>
+        <p class="text-gray-700 text-sm">A soothing miracle plant for skin and digestion.</p>
+        <button onclick="toggleDetails('aloe-details', this)" class="text-white bg-green-600 px-4 py-2 rounded-lg hover:bg-green-700 text-sm">Learn more</button>
+        <div id="aloe-details" class="hidden mt-4 text-sm text-gray-700 space-y-3">
+          <div>
+            <h3 class="font-semibold text-green-700">🌿 Key Benefits:</h3>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Heals burns and hydrates skin</li>
+              <li>Improves gut health</li>
+              <li>Boosts immunity</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-green-700">🍽️ Edible Uses:</h3>
+            <p>Used in juices, smoothies, tonics. Often mixed with honey or lemon.</p>
+          </div>
+          <a href="https://www.flipkart.com/search?q=aloe+vera+plant" target="_blank" class="text-white bg-green-600 px-4 py-1 rounded hover:bg-green-700 inline-block">Buy Aloe Vera on Flipkart</a>
+        </div>
+      </div>
+
     </div>
   </main>
 
   <script>
     AOS.init();
+
+    // Toggle More Info
+    function toggleDetails(id, btn) {
+      const el = document.getElementById(id);
+      if (el.classList.contains("hidden")) {
+        el.classList.remove("hidden");
+        btn.textContent = "Hide details";
+      } else {
+        el.classList.add("hidden");
+        btn.textContent = "Learn more";
+      }
+    }
+
+    // Search Filter
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('#plantCards > div');
+
+    searchInput.addEventListener('input', function () {
+      const query = this.value.toLowerCase();
+      cards.forEach(card => {
+        const title = card.querySelector('h2').textContent.toLowerCase();
+        card.style.display = title.includes(query) ? 'block' : 'none';
+      });
+    });
   </script>
 </body>
 
